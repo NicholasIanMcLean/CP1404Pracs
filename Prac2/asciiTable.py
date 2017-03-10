@@ -12,10 +12,6 @@ while number < LOWER or number > UPPER:
 convertedNumber = chr(number)
 print("The ASCII code for", number, "is", convertedNumber)
 
-number = LOWER
-startPoint = LOWER
-endPoint = UPPER
-while LOWER <= number <= UPPER:
+for number in range(33, 127, 1):
     character = chr(number)
     print("{:3} : {}".format(number, character))
-    number += 1
