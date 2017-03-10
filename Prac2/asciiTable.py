@@ -12,6 +12,6 @@ UPPER = 127
 # convertedNumber = chr(number)
 # print("The ASCII code for", number, "is", convertedNumber)
 
-for number in range(33, 127, 1):
+for number in range(LOWER, UPPER+1):
     character = chr(number)
     print("{:3} : {}".format(number, character))
