@@ -3,15 +3,27 @@ import random
 VOWELS = "aeiou"
 CONSONANTS = "bcdfghjklmnpqrstvwxyz"
 CORV = "cv"
-word_format = ""
 
-# number_in_word_format = int(input("How many letters in the format? "))
-# for i in range(1, number_in_word_format+1):
-#     word_format += random.choice(CORV)
-# print(word_format)
-word_format = str.lower(input("word format?: "))
+
+def is_valid_input():
+    valid_input = False
+    while not valid_input:
+        word_format = str.lower(input("word format?: "))
+        letter_count = 0
+
+        for letter in word_format:
+            if letter in CORV:
+                letter_count += 1
+
+        if letter_count == len(word_format):
+            valid_input = True
+            return word_format
+        else:
+            print("Invalid format")
 
 word = ""
+word_format = is_valid_input()
+
 for kind in word_format:
     if kind == "c":
         word += random.choice(CONSONANTS)
@@ -19,16 +31,4 @@ for kind in word_format:
         word += random.choice(VOWELS)
 
 print(word)
-
-
-# for kind in word_format(random.choice(CORV)):
-#     print(kind)
-#     if kind == "c":
-#         word_format += "c"
-#     else:
-#         word_format += "v"
-# print(word_format)
-#
-#
-#
 
