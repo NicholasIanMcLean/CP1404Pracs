@@ -5,16 +5,10 @@ character = input("Enter a character: ")
 convertedCharacter = ord(character)
 print("The ASCII code for", character, "is", convertedCharacter)
 
-
-def get_number():
-    global number
-    string_formatted = "Enter a number between {} to {}: ".format(LOWER, UPPER)
+string_formatted = "Enter a number between {} to {}: ".format(LOWER, UPPER)
+number = int(input(string_formatted))
+while number < LOWER or number > UPPER:
     number = int(input(string_formatted))
-    while number < LOWER or number > UPPER:
-        number = int(input(string_formatted))
-
-
-get_number()
 convertedNumber = chr(number)
 print("The ASCII code for", number, "is", convertedNumber)
 
