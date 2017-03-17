@@ -18,3 +18,17 @@ for kind in word_format:
         word += random.choice(VOWELS)
 
 print(word)
+
+
+# for kind in word_format(random.choice(CORV)):
+#     print(kind)
+#     if kind == "c":
+#         word_format += "c"
+#     else:
+#         word_format += "v"
+# print(word_format)
+#
+#
+# word_format = str.lower(input("word format?: "))
+#
+
