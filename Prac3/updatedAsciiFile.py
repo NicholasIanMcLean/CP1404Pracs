@@ -5,6 +5,7 @@ character = input("Enter a character: ")
 convertedCharacter = ord(character)
 print("The ASCII code for", character, "is", convertedCharacter)
 
+
 def get_number():
     valid_input = False
     while not valid_input:
