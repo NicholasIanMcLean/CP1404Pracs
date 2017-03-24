@@ -1,22 +1,27 @@
 """
-Nick McLean
+CP1404/CP5632 Practical
+Starter code for cumulative total income program
 """
-income_list = []
-number_of_months = int(input("How many months?: "))
-total = 0
-
-month_count = 0
-while month_count < number_of_months:
-    income = float(input("Enter income for month {}: ".format(month_count + 1)))
-    income_list.append(income)
-    month_count += 1
-
-print("Income Report\n************")
-month_count = 0
-for i in range(1, number_of_months + 1):
-    total += income_list[month_count]
-    print("Month {} - Income: ${:10} Total: ${:5}".format(month_count + 1, income_list[month_count], total))
-    month_count += 1
 
 
+def main():
+    incomes = []
+    month_count = int(input("How many months? "))
 
+    for month in range(1, month_count + 1):
+        income = float(input("Enter income for month {}: ".format(month)))
+        incomes.append(income)
+
+    income_report(incomes, month_count)
+
+
+def income_report(incomes, month_count):
+    print("\nIncome Report\n-------------")
+    total = 0
+    for month in range(1, month_count + 1):
+        income = incomes[month - 1]
+        total += income
+        print("Month {:2} - Income: ${:10.2f} Total: ${:10.2f}".format(month, income, total))
+
+
+main()
