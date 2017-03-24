@@ -1,9 +1,19 @@
 LOWER = 33
 UPPER = 127
 
-character = input("Enter a character: ")
-convertedCharacter = ord(character)
-print("The ASCII code for", character, "is", convertedCharacter)
+
+def main():
+    character = input("Enter a character: ")
+    convertedCharacter = ord(character)
+    print("The ASCII code for", character, "is", convertedCharacter)
+
+    number = get_number()
+    convertedNumber = chr(number)
+    print("The ASCII code for", number, "is", convertedNumber)
+
+    for number in range(LOWER, UPPER + 1):
+        character = chr(number)
+        print("{:3} : {}".format(number, character))
 
 
 def get_number():
@@ -19,10 +29,5 @@ def get_number():
         except ValueError:
             print("Invalid (not an integer)")
 
-number = get_number()
-convertedNumber = chr(number)
-print("The ASCII code for", number, "is", convertedNumber)
 
-for number in range(LOWER, UPPER+1):
-    character = chr(number)
-    print("{:3} : {}".format(number, character))
+main()

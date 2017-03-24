@@ -3,10 +3,12 @@ Nick McLean
 """
 import random
 
+
 def dead_gopher(population):
     percentage = random.randint(5, 25)
     dead_population = population * (percentage / 100)
     return dead_population
+
 
 def born_gopher(population):
     percentage = random.randint(10, 20)
